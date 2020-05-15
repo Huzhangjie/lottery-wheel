@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Lottery 
+      lottery-bg="./imgs/turnplate-bg.png"
+      pointer-bg="./imgs/pointer.png"
+      :lottery-start="lotteryStart"
+      @lotteryClick="lotteryClick"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Lottery from './components/Lottery.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Lottery
+  },
+  data() {
+    return {
+      lotteryStart: 0
+    }
+  },
+  methods: {
+    lotteryClick() {
+      console.log("lotteryClick -> lotteryClick")
+    }
   }
 }
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
 </style>
