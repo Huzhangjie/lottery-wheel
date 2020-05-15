@@ -17,7 +17,7 @@
         v-for="(item, index) in prizeList"
         :key="index"
       >
-        <span>{{item.name}}</span>
+        <div class="prize-item__name">{{item.name}}</div>
       </div>
     </div>
 
@@ -106,32 +106,36 @@ export default {
   width: 50%;
   height: 50%;
   background-color: aqua;
-  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
   transform-origin: 100% 100%;
 }
-.lottery-content__item span{
+.lottery-content__item .prize-item__name{
     /* transform: rotate(-45deg); */
-    transform: rotate(-45deg) skew(-30deg,30deg);
+    transform: rotate(-45deg);
 }
 .lottery-content__item:first-child {
   background-color: red;
-  transform: rotate(60deg) skewY(30deg);
+  transform: rotate(60deg) skew(15deg, 15deg);
 }
 .lottery-content__item:nth-child(2) {
   background-color: yellow;
-  transform: rotate(120deg) skewY(30deg);
+  transform: rotate(120deg) skew(15deg, 15deg);
 }
 .lottery-content__item:nth-child(3) {
   background-color: antiquewhite;
-  transform: rotate(180deg) skewY(30deg);
+  transform: rotate(180deg) skew(15deg, 15deg);
 }
 .lottery-content__item:nth-child(4) {
+  background-color: azure;
+  transform: rotate(240deg) skew(15deg, 15deg);
+}
+.lottery-content__item:nth-child(5) {
   background-color: darkblue;
-  transform: rotate(240deg) skewY(30deg);
+  transform: rotate(300deg) skew(15deg, 15deg);
 }
 .lottery-content__item:last-child {
   background-color: blue;
-  transform: rotate(300deg) skewY(30deg);
+  transform: rotate(0deg) skew(15deg, 15deg);
 }
 .lottery_pointer{
   position: absolute;
